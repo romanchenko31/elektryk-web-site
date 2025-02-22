@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="container mx-auto p-6 md:p-10 bg-gray-100 bg-opacity-40 rounded-lg shadow-lg text-center">
+    <section className="container mx-auto p-6 md:p-10 bg-white bg-opacity-40 rounded-lg shadow-lg text-center">
       <h2 className="text-4xl font-bold text-blue-600 mb-6">Наші контакти</h2>
 
       <div className="text-lg text-gray-800 mb-6">

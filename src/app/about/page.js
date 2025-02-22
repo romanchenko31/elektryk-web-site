@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="container mx-auto p-6 md:p-10 bg-gray-100 bg-opacity-40 rounded-lg shadow-lg">
+    <section className="container mx-auto p-6 md:p-10 bg-white bg-opacity-40 rounded-lg shadow-lg">
       <h2 className="text-4xl font-bold text-center text-blue-600 mb-8">
         Про нас
       </h2>
