@@ -84,7 +84,10 @@ export default function ContactForm() {
         {loading ? "Відправка..." : "Відправити"}
       </button>
       {success && (
-        <p className="text-green-500 mt-2">Повідомлення відправлено!</p>
+        <p className="text-green-500 mt-2">
+          Ваша заявка була успішно надіслана. Наш спеціаліст зв'яжеться з вами
+          найближчим часом для уточнення деталей
+        </p>
       )}
       {error && <p className="text-red-500 mt-2">{error}</p>}
     </form>
