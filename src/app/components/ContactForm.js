@@ -20,6 +20,7 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setError("");
+    setSuccess(false);
 
     try {
       const res = await fetch("/api/sendMessage", {
@@ -28,11 +29,13 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
-      if (!res.ok) throw new Error("Ошибка отправки!");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Ошибка отправки!");
 
       setSuccess(true);
       setFormData({ name: "", phone: "", message: "" });
-    } catch {
+    } catch (err) {
+      console.error("Ошибка запроса:", err);
       setError("Ошибка отправки! Попробуйте позже.");
     } finally {
       setLoading(false);
