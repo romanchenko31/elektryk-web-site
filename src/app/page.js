@@ -124,12 +124,12 @@ export default function Services() {
             </p>
           </div>
         )}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-semibold mb-6 text-gray-700">
             Залишити заявку на виклик електрика
           </h3>
           <p className="text-lg text-gray-600 mb-4">
-            Наш майстер зв &apos; яжеться з вами протягом 5-10 хвилин для
+            Наш майстер зв&apos;яжеться з вами протягом 5-10 хвилин для
             уточнення деталей замовлення.
           </p>
 

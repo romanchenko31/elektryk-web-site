@@ -47,7 +47,7 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="mt-6 p-6 bg-white shadow-lg rounded-lg"
     >
-      <h4 className="text-2xl font-semibold text-gray-800 mb-4">
+      <h4 className="text-2xl font-semibold text-gray-800  mb-4">
         Залишити заявку
       </h4>
       <input
@@ -79,7 +79,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-blue-500 text-white p-2 rounded"
+        className="w-full bg-gray-800 bg-opacity-90 text-white p-2 rounded"
       >
         {loading ? "Відправка..." : "Відправити"}
       </button>

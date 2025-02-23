@@ -124,7 +124,7 @@ export default function Services() {
             </p>
           </div>
         )}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-semibold mb-6 text-gray-700">
             Залишити заявку на виклик електрика
           </h3>
