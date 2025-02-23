@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ServiceCard from "./components/ServiceCard"; // путь должен быть относительно текущего файла
+import ContactForm from "./components/ContactForm"; // Подключаем форму
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState("diagnostics");
@@ -123,6 +124,19 @@ export default function Services() {
             </p>
           </div>
         )}
+        <div className="text-center mt-12">
+          <h3 className="text-3xl font-semibold mb-6 text-gray-700">
+            Залишити заявку на виклик електрика
+          </h3>
+          <p className="text-lg text-gray-600 mb-4">
+            Наш майстер зв'яжеться з вами протягом 5-10 хвилин для уточнення
+            деталей замовлення.
+          </p>
+
+          <div className="max-w-2xl mx-auto">
+            <ContactForm />
+          </div>
+        </div>
       </div>
     </section>
   );
