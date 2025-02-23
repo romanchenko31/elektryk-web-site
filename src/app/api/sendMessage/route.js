@@ -30,7 +30,8 @@ export async function POST(req) {
     }
 
     return Response.json({ success: true });
-  } catch (error) {
+  } catch (err) {
+    console.error("Ошибка сервера:", err);
     return Response.json({ error: "Ошибка сервера" }, { status: 500 });
   }
 }

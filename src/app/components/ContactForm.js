@@ -53,7 +53,7 @@ export default function ContactForm() {
       <input
         type="text"
         name="name"
-        placeholder="Ваше ім&aposя"
+        placeholder="Ваше ім'я"
         value={formData.name}
         onChange={handleChange}
         required
