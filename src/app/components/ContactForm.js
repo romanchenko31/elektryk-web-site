@@ -32,7 +32,7 @@ export default function ContactForm() {
 
       setSuccess(true);
       setFormData({ name: "", phone: "", message: "" });
-    } catch (err) {
+    } catch {
       setError("Ошибка отправки! Попробуйте позже.");
     } finally {
       setLoading(false);
@@ -50,7 +50,7 @@ export default function ContactForm() {
       <input
         type="text"
         name="name"
-        placeholder="Ваше ім'я"
+        placeholder="Ваше ім&aposя"
         value={formData.name}
         onChange={handleChange}
         required
