@@ -1,3 +1,5 @@
+"use client"; // Добавьте эту строку
+
 import { useState } from "react";
 
 const ChatForm = () => {
