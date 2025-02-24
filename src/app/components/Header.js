@@ -1,5 +1,3 @@
-// components/Header.js
-
 "use client";
 
 import { useState } from "react";
@@ -9,9 +7,10 @@ import Link from "next/link";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <>
-      {/* Фиксированный хедер */}
       <header className="bg-gray-800 bg-opacity-90 p-4 text-white fixed top-0 left-0 w-full z-50 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="text-3xl font-bold font-roboto">
@@ -28,24 +27,28 @@ export default function Header() {
             <Link
               href="/services"
               className="block md:inline py-2 px-4 hover:bg-gray-700"
+              onClick={closeMenu}
             >
               Послуги
             </Link>
             <Link
               href="/about"
               className="block md:inline py-2 px-4 hover:bg-gray-700"
+              onClick={closeMenu}
             >
               Про нас
             </Link>
             <Link
               href="/blog"
               className="block md:inline py-2 px-4 hover:bg-gray-700"
+              onClick={closeMenu}
             >
               Блог
             </Link>
             <Link
               href="/contact"
               className="block md:inline py-2 px-4 hover:bg-gray-700"
+              onClick={closeMenu}
             >
               Контакт
             </Link>
@@ -54,6 +57,7 @@ export default function Header() {
               <a
                 href="tel:+380501336304"
                 className="text-lg font-bold text-white hover:underline"
+                onClick={closeMenu}
               >
                 +380501336304
               </a>
