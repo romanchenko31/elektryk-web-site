@@ -13,20 +13,20 @@ export default function ChatWidget() {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(""); // переменная для ошибки
+  const [err, setErr] = useState(""); // изменили имя переменной с `error` на `err`
 
   const toggleChat = () => setIsOpen(!isOpen);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    if (error) setError(""); // если ошибка есть, очищаем ее
+    if (err) setErr(""); // если ошибка есть, очищаем ее
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
-    setError(""); // очищаем ошибку перед отправкой
+    setErr(""); // очищаем ошибку перед отправкой
     setSuccess(false);
 
     try {
@@ -41,8 +41,8 @@ export default function ChatWidget() {
       setFormData({ name: "", phone: "", message: "" });
       setTimeout(() => setIsOpen(false), 2000);
     } catch (error) {
-      // используем переменную error в catch
-      setError("Ошибка отправки! Попробуйте позже.");
+      // используем переменную err для ошибки
+      setErr("Ошибка отправки! Попробуйте позже.");
     } finally {
       setLoading(false);
     }
@@ -108,7 +108,8 @@ export default function ChatWidget() {
             {success && (
               <p className="text-green-500 mt-2">Повідомлення відправлено</p>
             )}
-            {error && <p className="text-red-500 mt-2">{error}</p>}
+            {err && <p className="text-red-500 mt-2">{err}</p>}{" "}
+            {/* используем err */}
           </form>
         </div>
       )}
