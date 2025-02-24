@@ -40,7 +40,7 @@ export default function ChatWidget() {
       setSuccess(true);
       setFormData({ name: "", phone: "", message: "" });
       setTimeout(() => setIsOpen(false), 2000);
-    } catch (err) {
+    } catch (error) {
       setError("Ошибка отправки! Попробуйте позже.");
     } finally {
       setLoading(false);
@@ -74,7 +74,7 @@ export default function ChatWidget() {
             <input
               type="text"
               name="name"
-              placeholder="Ваше им'я"
+              placeholder="Ваше ім'я"
               value={formData.name}
               onChange={handleChange}
               required
