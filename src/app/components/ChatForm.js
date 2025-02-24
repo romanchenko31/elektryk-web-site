@@ -13,20 +13,20 @@ export default function ChatWidget() {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(""); // переменная для ошибки
 
   const toggleChat = () => setIsOpen(!isOpen);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    if (error) setError("");
+    if (error) setError(""); // если ошибка есть, очищаем ее
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
-    setError("");
+    setError(""); // очищаем ошибку перед отправкой
     setSuccess(false);
 
     try {
@@ -40,7 +40,7 @@ export default function ChatWidget() {
       setSuccess(true);
       setFormData({ name: "", phone: "", message: "" });
       setTimeout(() => setIsOpen(false), 2000);
-    } catch (error) {
+    } catch (err) {
       setError("Ошибка отправки! Попробуйте позже.");
     } finally {
       setLoading(false);
