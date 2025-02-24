@@ -40,7 +40,8 @@ export default function ChatWidget() {
       setSuccess(true);
       setFormData({ name: "", phone: "", message: "" });
       setTimeout(() => setIsOpen(false), 2000);
-    } catch (err) {
+    } catch (error) {
+      // используем переменную error в catch
       setError("Ошибка отправки! Попробуйте позже.");
     } finally {
       setLoading(false);
