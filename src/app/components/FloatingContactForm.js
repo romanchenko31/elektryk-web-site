@@ -24,7 +24,7 @@ export default function FloatingContactForm() {
     setSuccess(false);
 
     try {
-      const message = `\u2709\uFE0F Нова заявка:\nІм'я: ${
+      const message = `✉️ Нова заявка:\nІм'я: ${
         formData.name || "-"
       }\nТелефон: ${formData.phone}\nПовідомлення: ${formData.message || "-"}`;
 
@@ -53,7 +53,7 @@ export default function FloatingContactForm() {
         <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-200 backdrop-blur-lg">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-semibold text-gray-800">
-              Зв'язатися з нами
+              Зв&apos;язатися з нами
             </h3>
             <button
               onClick={() => setIsOpen(false)}
@@ -112,7 +112,7 @@ export default function FloatingContactForm() {
 
           {/* На десктопной версии: кнопка с текстом и кружком */}
           <div className="hidden sm:flex flex-col items-center absolute right-4 bottom-4 z-50">
-            <p className="text-black mb-2">Залишити заявку</p>
+            <p className="text-black font-bold text-lg mb-2">Залишити заявку</p>
             <button
               onClick={() => setIsOpen(true)}
               className="bg-green-600 hover:bg-green-700 text-white rounded-full p-6 shadow-xl"
