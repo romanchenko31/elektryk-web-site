@@ -1,9 +1,9 @@
 // app/layout.js
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import ChatForm from "./components/ChatForm";
 import "./globals.css";
 import { Roboto } from "next/font/google"; // Импортируем шрифт Roboto
+import FloatingContactForm from "./components/FloatingContactForm";
 
 // Подключаем шрифт Roboto с поддержкой кириллицы
 const roboto = Roboto({
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         {/* Применяем шрифт ко всему body */}
         <Header />
         <main className="mt-[80px] md:mt-[100px] p-4">{children}</main>
-        <ChatForm />
+        <FloatingContactForm />
         <Footer />
       </body>
     </html>
