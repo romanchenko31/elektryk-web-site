@@ -100,7 +100,12 @@ export default function FloatingContactForm() {
         <>
           {/* На мобильной версии: круглая кнопка и надпись */}
           <div className="sm:hidden flex flex-col items-start ml-8">
-            <p className="text-black font-bold text-lg mb-2">Залишити заявку</p>
+            <p
+              className="font-bold text-lg mb-2 text-white"
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
+            >
+              Залишити заявку
+            </p>
             <button
               onClick={() => setIsOpen(true)}
               className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-xl"
