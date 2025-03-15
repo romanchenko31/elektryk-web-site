@@ -101,7 +101,7 @@ export default function FloatingContactForm() {
           {/* На мобильной версии: круглая кнопка и надпись */}
           <div className="sm:hidden flex flex-col items-start ml-8">
             <p
-              className="font-bold text-lg mb-2 text-white"
+              className="font-bold text-lg mb-2 text-black"
               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
             >
               Залишити заявку
