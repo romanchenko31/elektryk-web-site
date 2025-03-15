@@ -98,13 +98,16 @@ export default function FloatingContactForm() {
         </div>
       ) : (
         <>
-          {/* На мобильной версии: круглая кнопка */}
-          <button
-            onClick={() => setIsOpen(true)}
-            className="sm:hidden bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-xl"
-          >
-            💬
-          </button>
+          {/* На мобильной версии: круглая кнопка и надпись */}
+          <div className="sm:hidden flex flex-col items-start ml-8">
+            <p className="text-black font-bold text-lg mb-2">Залишити заявку</p>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-xl"
+            >
+              💬
+            </button>
+          </div>
 
           {/* На десктопной версии: кнопка с текстом и кружком */}
           <div className="hidden sm:flex flex-col items-center absolute right-4 bottom-4 z-50">
