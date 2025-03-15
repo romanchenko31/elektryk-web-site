@@ -24,10 +24,6 @@ export default function FloatingContactForm() {
     setSuccess(false);
 
     try {
-      const message = `✉️ Нова заявка:\nІм'я: ${
-        formData.name || "-"
-      }\nТелефон: ${formData.phone}\nПовідомлення: ${formData.message || "-"}`;
-
       const res = await fetch("/api/sendMessage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
