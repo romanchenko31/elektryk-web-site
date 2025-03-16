@@ -37,7 +37,7 @@ export default function FloatingContactForm() {
       setFormData({ name: "", phone: "", message: "" });
     } catch (err) {
       console.error("Ошибка запроса:", err);
-      setError("Ошибка отправки! Попробуйте позже.");
+      setError("Помилка відправки! Спробуйте пізніше.");
     } finally {
       setLoading(false);
     }
@@ -46,7 +46,7 @@ export default function FloatingContactForm() {
   return (
     <div className="fixed bottom-4 right-4 z-50 w-full max-w-sm sm:w-80">
       {isOpen ? (
-        <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-200 backdrop-blur-lg animate-fade-in transition-all duration-300">
+        <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-200 backdrop-blur-lg transition-all duration-300">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-semibold text-gray-800">
               Зв&apos;язатися з нами
@@ -97,18 +97,15 @@ export default function FloatingContactForm() {
           </form>
         </div>
       ) : (
-        <>
-          {/* Кнопка без текста на всех устройствах */}
-          <div className="flex flex-col items-center absolute right-4 bottom-4 z-50">
-            <button
-              onClick={() => setIsOpen(true)}
-              className="bg-green-600 hover:bg-green-700 text-white rounded-full p-6 shadow-xl transition-transform duration-300 ease-in-out hover:scale-110 motion-safe:animate-bounce"
-              aria-label="Відкрити форму"
-            >
-              💬
-            </button>
-          </div>
-        </>
+        <div className="flex flex-col items-center absolute right-4 bottom-4 z-50">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-6 shadow-xl animate-wiggleScale"
+            aria-label="Відкрити форму"
+          >
+            💬
+          </button>
+        </div>
       )}
     </div>
   );
