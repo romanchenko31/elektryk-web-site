@@ -46,14 +46,14 @@ export default function FloatingContactForm() {
   return (
     <div className="fixed bottom-4 right-4 z-50 w-full max-w-sm sm:w-80">
       {isOpen ? (
-        <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-200 backdrop-blur-lg">
+        <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-200 backdrop-blur-lg animate-fade-in transition-all duration-300">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-semibold text-gray-800">
               Зв&apos;язатися з нами
             </h3>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-gray-500 hover:text-gray-700 text-xl"
+              className="text-gray-500 hover:text-gray-700 text-xl transition-transform duration-200 hover:scale-110"
             >
               ×
             </button>
@@ -86,7 +86,7 @@ export default function FloatingContactForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gray-800 bg-opacity-90 text-white py-3 rounded-xl"
+              className="w-full bg-gray-800 bg-opacity-90 text-white py-3 rounded-xl transition-transform duration-200 hover:scale-105"
             >
               {loading ? "Відправка..." : "Відправити"}
             </button>
@@ -98,28 +98,12 @@ export default function FloatingContactForm() {
         </div>
       ) : (
         <>
-          {/* На мобильной версии: круглая кнопка и надпись */}
-          <div className="sm:hidden flex flex-col items-start ml-8">
-            <p
-              className="font-bold text-lg mb-2 text-black"
-              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
-            >
-              Залишити заявку
-            </p>
+          {/* Кнопка без текста на всех устройствах */}
+          <div className="flex flex-col items-center absolute right-4 bottom-4 z-50">
             <button
               onClick={() => setIsOpen(true)}
-              className="bg-green-600 hover:bg-green-700 text-white rounded-full p-4 shadow-xl"
-            >
-              💬
-            </button>
-          </div>
-
-          {/* На десктопной версии: кнопка с текстом и кружком */}
-          <div className="hidden sm:flex flex-col items-center absolute right-4 bottom-4 z-50">
-            <p className="text-black font-bold text-lg mb-2">Залишити заявку</p>
-            <button
-              onClick={() => setIsOpen(true)}
-              className="bg-green-600 hover:bg-green-700 text-white rounded-full p-6 shadow-xl"
+              className="bg-green-600 hover:bg-green-700 text-white rounded-full p-6 shadow-xl transition-transform duration-300 ease-in-out hover:scale-110 motion-safe:animate-bounce"
+              aria-label="Відкрити форму"
             >
               💬
             </button>
